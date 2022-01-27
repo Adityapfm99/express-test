@@ -4,7 +4,6 @@ Programming Challenge
 ### QUESTIONS
 1. Write api to generate four (4) types of printable random objects and store them in a single file, each object will be separated by a ",".  These are the 4 objects: alphabetical strings, real numbers, integers, alphanumerics.
 
-
 > Sample extracted output :
 
 > hisadfnnasd, 126263, assfdgsga12348fas, 13123.123,
