@@ -4,7 +4,7 @@ var Random = require("random-js")();
 var bytes = require("bytes");
 //10485760 (10MB), 1048576 (1MB), 1024 (1KB)
 
-var OUTPUT_SIZE = 204800; //  MB
+var OUTPUT_SIZE = 2097152; //  MB
 // 2097152
 // Random alphabetic generator
 var genAlphabeticString = function (limit) {
