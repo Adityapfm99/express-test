@@ -1,8 +1,8 @@
-Programming Challenge
+Programming Challenge Express frameworks
 =========================
 
 ### QUESTIONS
-1. Write api to generate four (4) types of printable random objects and store them in a single file, each object will be separated by a ",".  These are the 4 objects: alphabetical strings, real numbers, integers, alphanumerics.
+1. API to generate four (4) types of printable random objects and store them in a single file, each object will be separated by a ",".  These are the 4 objects: alphabetical strings, real numbers, integers, alphanumerics.
 
 > Sample extracted output :
 
@@ -11,22 +11,40 @@ Programming Challenge
 > nmarcysfa900jkifh  , 3.781, 2.11, ....
 
 
-2. Create a program that will read the generated file above and print to
-the console the object and its type. Spaces before and after the
-alphanumeric object must be stripped.
+2. API to total number of each random objects.
 
 > Sample output :
 
-> youruasdifafasd - alphabetical strings
-> 127371237 - integer
-> asdfka12348fas - alphanumeric
-> 13123.123 - real numbers
-> asjdfklasdjfklaasf - alphabetical strings
-> 123192u3kjwekhf - alphanumeric
+> ioksjjusujjosjljslsjs - alphabetical strings
+> 127393283382928371237 - integer
+> asdfka1j3jr9k32348fas - alphanumeric
+> 1312332223932.1000223 - real numbers
 
+## Installation
 
-### SOLUTION
-1. Run ```npm install```
-2. Run ```npm start``` and wait for awhile for it to generate the output in ```output/output.txt```
-3. Set the ```OUTPUT_SIZE (in line 6: writer/program.js)``` to ```10485760 (10MB), 1048576 (1MB), or 1024 (1KB)``` if desired.
-4. Run ```npm run reader``` and it will evaluate every results from before into ```output/result.txt```
+```bash
+npm install
+```
+or
+
+```bash
+yarn install
+```
+
+## Running the app
+
+```bash
+$ yarn start
+```
+or
+```bash
+$ npm start
+```
+
+### Endpoint (GET)
+1. /api/v1/generate --> for generate the output in ```output/output.txt```, the response will provide a link to download.
+2. /api/v1/report --> total number of each random objects.
+    example :   "Alphanumerics : 23,
+                Integer : 7,
+                Alphabetical strings : 9,
+                Real numbers : 14"

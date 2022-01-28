@@ -59,7 +59,7 @@ var evaluator = {
     var isInt = evaluatee % 1 === 0;
 
     if (isInt) {
-      this.type = "Integer";
+      this.type = "Integers";
       this.countisInteger++;
       // this.result = evaluatee + " - " + this.type + this.countisInteger;
       this.result = this.countisInteger + "-" + this.type;
@@ -138,10 +138,6 @@ fs.readFile("./output/output.txt", "utf8", function (err, content) {
   const resultALphabetical = (totalTypeAplhabetical.concat(space, totalAlphabetical))
   const resultRealNumber = (totalTypeRealNumber.concat(space, totalRealNumber))
 
-  console.log(resultALphabetical)
-  console.log(resultInteger)
-  console.log(resultALphanumeric)
-  console.log(resultRealNumber)
 
   var hasil = [
     resultALphanumeric,

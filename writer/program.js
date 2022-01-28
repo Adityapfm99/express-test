@@ -2,8 +2,9 @@ var fs = require("fs");
 var randomstring = require("randomstring");
 var Random = require("random-js")();
 var bytes = require("bytes");
+//10485760 (10MB), 1048576 (1MB), 1024 (1KB)
 
-var OUTPUT_SIZE = 1024; // 10485760 (10MB), 1048576 (1MB), 1024 (1KB)
+var OUTPUT_SIZE = 2097152; // 2 MB
 
 // Random alphabetic generator
 var genAlphabeticString = function (limit) {
@@ -62,7 +63,7 @@ var genMainFile = function (
   console.log(
     "Generating output file of size " +
       bytes(OUTPUT_SIZE) +
-      ", please be patient.."
+      ", Generating..."
   );
 
   while (finalOutput.toString().length < OUTPUT_SIZE) {
@@ -86,7 +87,6 @@ var genMainFile = function (
     finalOutput.push(item);
   }
 
-  console.log("Final output size is:", bytes(finalOutput.toString().length));
   fs.writeFile("./output/output.txt", finalOutput, function (err, content) {
     if (err) throw console.error("Error writing output", err);
 
