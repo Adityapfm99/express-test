@@ -1,5 +1,4 @@
 {
-  "name": "Programming Challenge",
   "version": "0.0.1",
   "description": "API for generate four(4) types of printable random ",
   "main": "./writer/program.js",
