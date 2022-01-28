@@ -41,9 +41,9 @@ or
 $ npm start
 ```
 
-### Endpoint (GET)
-1. /api/v1/generate --> for generate the output in ```output/output.txt```, the response will provide a link to download.
-2. /api/v1/report --> total number of each random objects.
+### Endpoint 
+1. [POST] /api/v1/generate --> for generate the output in ```output/output.txt```, the response will provide a link to download.
+2. [GET] /api/v1/report --> total number of each random objects.
     example :   "Alphanumerics : 23,
                 Integer : 7,
                 Alphabetical strings : 9,

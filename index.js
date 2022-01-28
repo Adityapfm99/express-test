@@ -4,7 +4,7 @@ var fs = require("fs");
 
 const port = process.env.PORT || 4000;
 
-app.get("/api/v1/generate", async (req, res) => {
+app.post("/api/v1/generate", async (req, res) => {
   try {
     var gen = require("./writer/program");
     res.status(200).json({
