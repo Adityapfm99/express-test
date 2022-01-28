@@ -1,12 +1,10 @@
 {
-  "name": "writer",
+  "name": "Programming Challenge",
   "version": "0.0.1",
-  "description": "Write a program that will generate four(4) types of printable random ",
+  "description": "API for generate four(4) types of printable random ",
   "main": "./writer/program.js",
   "scripts": {
-    "test": "npm test",
-    "start": "node ./index.js",
-    "reader": "node ./reader/program.js"
+    "start": "node ./index.js"
   },
   "author": "Aditya",
   "license": "ISC",
