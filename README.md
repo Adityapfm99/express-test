@@ -48,11 +48,3 @@ $ npm start
                 Integer : 7,
                 Alphabetical strings : 9,
                 Real numbers : 14"
-
-### Deployment Heroku (sample output 2 kb only)
-Host :  https://programming-challenge-aditya.herokuapp.com
-
-# example: 
-1. https://programming-challenge-aditya.herokuapp.com/api/v1/generate
-
-2. https://programming-challenge-aditya.herokuapp.com/api/v1/report

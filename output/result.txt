@@ -1,1 +1,1 @@
-Alphanumerics : 409,Integers : 227,Alphabetical strings : 194,Real numbers : 398
+Alphanumerics : 47,Integers : 31,Alphabetical strings : 18,Real numbers : 49
