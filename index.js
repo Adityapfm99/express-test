@@ -5,7 +5,7 @@ var stream = require('stream');
 var _ = require("lodash");
 const { report } = require("process");
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 async function wait(ms) {
   return new Promise((resolve, reject) => {
