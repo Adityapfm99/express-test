@@ -5,13 +5,17 @@ var fs = require("fs");
 const port = process.env.PORT || 4000;
 
 app.get("/api/v1/generate", async (req, res) => {
-  var gen = require("./writer/program");
+  try {
+    var gen = require("./writer/program");
 
-  res.status(200).json({
-    message: "Generate Report successfully",
-    status: 200,
-    link: req.protocol + "://" + req.get("host") + "/download",
-  });
+    res.status(200).json({
+      message: "Generate Report successfully",
+      status: 200,
+      link: req.protocol + "://" + req.get("host") + "/download",
+    });
+  } catch (err) {
+    next(err);
+  }
 });
 
 app.get("/api/v1/report", async (req, res) => {
