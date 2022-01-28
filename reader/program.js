@@ -118,13 +118,13 @@ fs.readFile("./output/output.txt", "utf8", function (err, content) {
       .isInteger();
     evaluatedArr.push(result.result);
   });
-  const space = " : "
+  const semiColon = " : ";
 
   const totalAlphanumeric = countTotalAlphanumeric.slice(-1);
   const totalTypeAplhanumeric = countTypeAlphanumeric[0];
 
   const totalInteger = countTotalInteger.slice(-1);
-  const totalTypeInteger= countTypeInteger[0];
+  const totalTypeInteger = countTypeInteger[0];
 
   const totalAlphabetical = countTotalAlphabetical.slice(-1);
   const totalTypeAplhabetical = countTypeAlphabetical[0];
@@ -132,21 +132,24 @@ fs.readFile("./output/output.txt", "utf8", function (err, content) {
   const totalRealNumber = countTotalRealNumber.slice(-1);
   const totalTypeRealNumber = countTypeRealNumber[0];
 
-
-  const resultALphanumeric = (totalTypeAplhanumeric.concat(space, totalAlphanumeric))
-  const resultInteger = (totalTypeInteger.concat(space, totalInteger))
-  const resultALphabetical = (totalTypeAplhabetical.concat(space, totalAlphabetical))
-  const resultRealNumber = (totalTypeRealNumber.concat(space, totalRealNumber))
-
+  const resultALphanumeric = totalTypeAplhanumeric.concat(
+    semiColon,
+    totalAlphanumeric
+  );
+  const resultInteger = totalTypeInteger.concat(semiColon, totalInteger);
+  const resultALphabetical = totalTypeAplhabetical.concat(
+    semiColon,
+    totalAlphabetical
+  );
+  const resultRealNumber = totalTypeRealNumber.concat(semiColon, totalRealNumber,);
 
   var hasil = [
     resultALphanumeric,
     resultInteger,
     resultALphabetical,
     resultRealNumber,
-  ]
-  totalResult.push(hasil)
-  
+  ];
+  totalResult.push(hasil);
 
   fs.writeFile("./output/result.txt", totalResult, function (err, content) {
     if (err) throw console.error("Error writing evaluation", err);
