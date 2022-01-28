@@ -1,7 +1,7 @@
 Programming Challenge Express frameworks
 =========================
 
-### QUESTIONS
+### Challenge Description
 1. API to generate four (4) types of printable random objects and store them in a single file, each object will be separated by a ",".  These are the 4 objects: alphabetical strings, real numbers, integers, alphanumerics.
 
 > Sample extracted output :
