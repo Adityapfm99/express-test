@@ -7,9 +7,8 @@ const port = process.env.PORT || 4000;
 app.get("/api/v1/generate", async (req, res) => {
   try {
     var gen = require("./writer/program");
-
     res.status(200).json({
-      message: "Generate Report successfully",
+      message: "Generate txt successfully, It's saved in /output/output.txt",
       status: 200,
       link: req.protocol + "://" + req.get("host") + "/download",
     });
@@ -19,13 +18,17 @@ app.get("/api/v1/generate", async (req, res) => {
 });
 
 app.get("/api/v1/report", async (req, res) => {
-  var gen = require("./reader/program");
-  var data = fs.readFileSync("./output/result.txt", "utf8");
-  res.status(200).json({
-    message: "Report created successfully",
-    status: 200,
-    result: data,
-  });
+  try {
+    var gen = require("./reader/program");
+    var data = fs.readFileSync("./output/result.txt", "utf8");
+    res.status(200).json({
+      message: "Total number of each random objects",
+      status: 200,
+      result: data,
+    });
+  } catch (err) {
+    next(err);
+  }
 });
 
 app.get("/download", (req, res) => {
