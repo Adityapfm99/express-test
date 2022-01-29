@@ -4,6 +4,10 @@ var fs = require("fs");
 
 const port = process.env.PORT || 4000;
 
+app.get("/", async (req, res) => {
+  res.end("Programming Challenge")
+});
+
 app.post("/api/v1/generate", async (req, res) => {
   try {
     var gen = require("./writer/program");
