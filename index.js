@@ -8,7 +8,7 @@ app.get("/", async (req, res) => {
   res.end("Programming Challenge")
 });
 
-app.post("/api/v1/generate", async (req, res) => {
+app.get("/api/v1/generate", async (req, res) => {
   try {
     var gen = require("./writer/program");
     res.status(200).json({
