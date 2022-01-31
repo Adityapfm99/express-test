@@ -48,3 +48,11 @@ $ npm start
                 Integer : 7,
                 Alphabetical strings : 9,
                 Real numbers : 14"
+
+
+## Sample Image
+![Alt text](generate.png)
+
+## Sample Fetch report
+![Alt text](report.png)
+
